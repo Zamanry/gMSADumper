@@ -1,4 +1,4 @@
-impacket==0.10.0
-ldap3==2.9.1
-pycryptodomex==3.15.0
-pycryptodome==3.19.0
+msldap==0.5.15
+pycryptodome>=3.12
+minikerberos>=0.4.2
+openpyxl>=3.1

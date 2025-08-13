@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gmsa-msldap"
+version = "0.2.0"
+description = "Dump gMSA passwords using msldap 0.5.15 (LDAPS only), with CSV/JSON/XLSX export."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+
+dependencies = [
+  "msldap==0.5.15",
+  "pycryptodome>=3.12",
+  "minikerberos>=0.4.2",
+  "openpyxl>=3.1",
+]
+
+[project.scripts]
+gmsa-msldap = "gmsa_msldap:main"
+
+[tool.setuptools]
+# If you keep the script as a single file in the project root:
+py-modules = ["gmsa_msldap"]
+
+[tool.setuptools.package-data]
+# no package data
